@@ -1,0 +1,14 @@
+def avgkol  (nam):
+    return sum(nam)/len(nam)
+num1 = int(input("tedad dars haro vared ko "))
+greads_dars = []
+for i in range (num1):
+  grade = int(input(f"enter yur dars {i+1}"))
+  greads_dars.append(grade)
+  avg = avgkol (greads_dars)
+  if avg >=17 :
+     print("very good")
+  elif 12<=avg<17 :
+     print("good")
+  elif avg<12 :
+     print("bad")       
