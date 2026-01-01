@@ -1,0 +1,5 @@
+name = input("enter your name")
+bir_the = int(input("enter your birtday"))
+yaer_now = 2026
+age = yaer_now-bir_the
+print(f"heloo{name}nice to met you his old{age}")
