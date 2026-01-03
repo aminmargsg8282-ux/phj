@@ -1,0 +1,35 @@
+class vehicle :
+    def __init__(self,brand,year):
+        self.brand = brand
+        self.year = year
+    def display_info(self):
+        print(f"vehicle is {self.brand}v{self.year}old")
+
+
+class car (vehicle):
+    def __init__(self, brand, year,num_doors):
+        super().__init__(brand, year)  
+        self.num_doors = num_doors
+    def display_info(self):
+        print("car this{self.num_doors}")
+        return super().display_info() 
+class bicycle (vehicle):
+    def __init__(self, brand, year,has_sidecar):
+        super().__init__(brand, year) 
+        self.has_sidecar = has_sidecar
+    def display_info(self):
+        if (self.has_sidecar=="true"):
+            print("are")
+        else :
+            print("na")
+            return super().display_info()
+v = vehicle("dena",8)
+c = car("pride",30,3)
+b = bicycle("giant",15,False)
+v.display_info()
+c.display_info()
+b.display_info()                
+
+        
+       
+
