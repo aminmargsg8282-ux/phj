@@ -1,0 +1,23 @@
+class book :
+    def __init__(self,titel,author,price):
+        self.titel = titel
+        self.author = author
+        self.price = price
+    def display_details(self):
+        print(f"titel : {self.titel}")
+        print(f"author :{self.author}")
+        print(f"price :{self.price}")
+    def discount_apply(self,discount_rate):
+        discount_amount = (discount_rate/100)*self.price
+        self.price -= discount_amount
+b1 = book("the little prince","amin",95000)
+b2 = book("word of war","ali",15000)
+print ("data ketab 1 :")
+b1.display_details()
+discount_rate =40
+b2.discount_apply(discount_rate)
+print("details ketab1 baed as discount :")
+b1.display_details()
+print("details ketab2 baed as discount :") 
+b2.display_details()           
+            
