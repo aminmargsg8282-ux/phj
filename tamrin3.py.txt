@@ -1,0 +1,40 @@
+students = [
+    {
+        "name": "amin",
+        "student_id": "1234",
+        "grades": [14,20,10]
+    },
+    {
+        "name": "arman",
+        "student_id": "9876",
+        "grades": [12,13,18]
+    },
+]   
+
+def calculate_student_gpa(student):
+    grades = student["grades"]
+    if not grades:
+        return 0
+    return sum(grades) / len(grades)
+
+st_gpa = 0
+print("moadel danesh amozan : ")
+
+for student in students:
+    gpa = calculate_student_gpa(student)
+    st_gpa += gpa
+    print(f"{student['name']} - شماره دانشجویی: {student['student_id']} - moadel: {gpa:.2f}")
+
+class_average = st_gpa / len(students)
+print(f"moadel kol :{class_average:.2f}\n")
+
+
+print("mogayese kol\n")
+for student in students:
+    gpa = calculate_student_gpa(student)
+    if gpa > class_average:
+        print(f"{student['name']} balatar az moadel.")
+    elif gpa < class_average:
+        print(f"{student['name']} payin tar az moadel.")
+    else:
+        print(f"{student['name']} brabar ast.")
